@@ -1,0 +1,307 @@
+/* Algemene styling voor de body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Algemeen ontwerp voor de body */
+body {
+  font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* Container voor alles */
+.container {
+  text-align: center;
+  background-color: #fff;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  width: 80%;
+  max-width: 1200px;
+}
+
+/* Header met grote tekst */
+h1 {
+  font-size: 55px;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding: 20px;
+  display: inline-block;
+  margin-bottom: 10px;
+  text-shadow: 
+  -2px -2px 0 rgba(0, 0, 0, 0.7),  
+  2px -2px 0 rgba(0, 0, 0, 0.7),  
+  -2px 2px 0 rgba(0, 0, 0, 0.7),  
+  2px 2px 0 rgba(0, 0, 0, 0.7); 
+  background-color: #ffcc00;  /* Gele achtergrond achter de tekst */
+}
+
+/* Button onder de tekst */
+
+.play-btn {
+  display: block;
+  width: fit-content;
+  margin: 30px auto; /* Zorgt voor extra ruimte en centreert de knop */
+  padding: 15px 30px;
+  font-size: 1.5rem; /* Grotere tekst in de knop */
+  text-align: center;
+  background-color: #ffcc00; /* Pas de kleur aan als nodig */
+  color: black;
+  border-radius: 5px; /* Maak de knop mooier afgerond */
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.play-btn:hover {
+  background-color: #ffaa00;
+  transform: scale(1.05);
+}
+
+/* Logo's in een rij: horizontaal naast elkaar */
+.logo-row {
+  display: flex;              /* Flexbox voor uitlijning van de logo's */
+  justify-content: center;    /* Zorgt voor uitlijning in het midden */
+  margin-top: 40px;
+  gap: 0;  /* Vergroot de ruimte tussen de logo's */
+  flex-wrap: wrap;  /* Zorgt ervoor dat de logo's netjes naar een nieuwe regel gaan als er te weinig ruimte is */
+}
+
+/* Logo-container zonder achtergrondkleur */
+.logo-item {
+  width: 200px;   /* Vergroot de containerbreedte van de logo's */
+  height: 200px;  /* Vergroot de containerhoogte van de logo's */
+  padding: 20px;  /* Verwijder de padding van de container */
+}
+
+/* Zorg ervoor dat de logo-afbeeldingen groter worden zonder vervorming */
+.logo-item img {
+  width: 100%;  /* Vul de containerbreedte */
+  height: 100%; /* Vul de containerhoogte */
+  object-fit: contain;  /* Zorg ervoor dat de afbeelding goed past zonder vervorming */
+}
+
+/* Achtergrondkleuren voor elk logo */
+.bg-red {
+  background-color: #ff4c4c;
+}
+
+.bg-lightgreen{
+  background-color: #3ea840;
+}
+
+.bg-green {
+  background-color: #2ec251;
+}
+
+.bg-yellow {
+  background-color: #efe523;
+}
+
+.bg-purple {
+  background-color: #873fdf;
+}
+
+.bg-orange {
+  background-color: #fa7f3d;
+}
+
+/* Voor kleinere schermen, zoals mobiele apparaten */
+@media (max-width: 600px) {
+  .logo-item {
+      width: 150px;  /* Verklein de containerbreedte op mobiele schermen */
+      height: 150px; /* Verklein de containerhoogte op mobiele schermen */
+  }
+
+  /* Zorg ervoor dat logo's netjes naast elkaar blijven op mobiele schermen */
+  .logo-row {
+      justify-content: space-evenly;  /* Zorg ervoor dat ze gelijkmatig verspreid worden */
+  }
+}
+
+/* spel pagina
+/* Algemene styling voor de body */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #fdf4b6; /* Lichtgele achtergrond */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+/* Gele balk bovenaan */
+.top-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #ffcc00;
+  border-radius: 5px;  
+  overflow: hidden;
+  position: relative;
+}
+
+.progress-bar {
+  width: 0%;
+  height: 100%;
+  background-color: #cc9900;
+  transition: width 0.5s ease;
+}
+
+/* Titel */
+.game-title {
+  font-size: 40px;
+  color: rgb(255, 255, 255); /* Witte tekstkleur */
+  text-align: center;
+  text-transform: uppercase;
+  margin-top: 20px;
+  padding: 10px;
+  display: inline-block;
+  background-color: transparent;
+  text-shadow: 
+  -2px -2px 0 rgba(0, 0, 0, 0.7),  
+  2px -2px 0 rgba(0, 0, 0, 0.7),  
+  -2px 2px 0 rgba(0, 0, 0, 0.7),  
+  2px 2px 0 rgba(0, 0, 0, 0.7); 
+}
+
+/* Vraagsectie */
+.question-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.question-number {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.question-container {
+  background-color: #ffcc00;
+  padding: 15px;
+  border-radius: 8px;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.question-text {
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  margin-top: 0px;
+}
+
+/* Keuzes voor de logo's */
+.options {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  margin-top: 20px;
+}
+
+.option {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.option img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.circle {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color: #fdf4b6; /* Lichtgeel */
+  border-radius: 50%;
+  font-size: 20px;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: background-color 0.3s;
+}
+
+.circle.dark-yellow {
+  background-color: #cc9900; /* Donker geel */
+}
+
+.option.selected {
+  border: 2px solid #cc9900; /* Donkergele rand */
+}
+
+/* Resultaatberichten */
+.result {
+  margin-top: 20px;
+}
+
+.result-text.correct {
+  font-size: 24px;
+  font-weight: bold;
+  color: green;
+}
+
+.result-text.wrong {
+  font-size: 24px;
+  font-weight: bold;
+  color: red;
+}
+
+/* Knop voor de volgende vraag */
+.next-button {
+  padding: 10px 20px;
+  background-color: #ffcc00;
+  color: black;
+  border: none;
+  font-weight: bold;
+  font-size: 20px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 30px;
+}
+
+.next-button:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.next-button:hover {
+  background-color: #ffaa00;
+}
+
+
+/* end page */
+.container h1 {
+  font-size: 3rem; /* Maak de titel groter */
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#scoreMessage {
+  font-size: 2rem; /* Maak de scoretekst groter */
+  text-align: center;
+  margin-bottom: 50px; /* Extra ruimte onder de tekst */
+}
